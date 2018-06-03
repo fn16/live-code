@@ -8,10 +8,11 @@ var grades1 = [
   { name: 'Osass', score: 10, classCode: 'B' },
   { name: 'Yolo', score: 90, classCode: 'C' },
 ];
-
+var grade;
+var classReports;
 function getReport(grades) {
-  // only code below
-  var classReports = [
+
+  classReports = [
     { classCode: 'A', passed: [], failed: [] },
     { classCode: 'B', passed: [], failed: [] },
     { classCode: 'C', passed: [], failed: [] },
@@ -19,7 +20,7 @@ function getReport(grades) {
 
   for(var i = 0; i < classReports.length; i++) {
     for(var j = 0; j < grades.length; j++) {
-      var grade = grades[j];
+       grade = grades[j];
       if(grade.classCode === classReports[i].classCode) { 
         if(grade.score >=70 ){
           classReports[i].passed.push(grade.name)

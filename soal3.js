@@ -1,9 +1,12 @@
+ var satuDigit = []
+ var duaDigit = []
+ var tigaDigit = []
+ var empatDigit = []
+ var strNum = []
+
+
 function digitsGrouper(numbers) {
-  var satuDigit = []
-  var duaDigit = []
-  var tigaDigit = []
-  var empatDigit = []
-  var strNum = []
+ 
   for(var j=0; j<numbers.length; j++){
     strNum.push(''+numbers[j])
   }
