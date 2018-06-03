@@ -1,29 +1,29 @@
- var satuDigit = []
- var duaDigit = []
- var tigaDigit = []
- var empatDigit = []
- var strNum = []
-
+ var satuDigit = [];
+ var duaDigit = [];
+ var tigaDigit = [];
+ var empatDigit = [];
+ var strNumber = [];
+ var Hasil =[];
 
 function digitsGrouper(numbers) {
  
   for(var j=0; j<numbers.length; j++){
-    strNum.push(''+numbers[j])
+    strNumber.push(''+numbers[j])
   }
-  for(var i=0; i<strNum.length;i++){
-    if(strNum[i].length===1){
-      satuDigit.push(strNum[i])
-    }else if(strNum[i].length===2){
-      duaDigit.push(strNum[i])
-    }else if(strNum[i].length===3){
-      tigaDigit.push(strNum[i])
+  for(var i=0; i<strNumber.length;i++){
+    if(strNumber[i].length===1){
+      satuDigit.push(strNumber[i])
+    }else if(strNumber[i].length===2){
+      duaDigit.push(strNumber[i])
+    }else if(strNumber[i].length===3){
+      tigaDigit.push(strNumber[i])
     }else{
-      empatDigit.push(strNum[i])
+      empatDigit.push(strNumber[i])
     }
   }
-  var arrHasil =[]
-  arrHasil.push(satuDigit, duaDigit, tigaDigit, empatDigit)
-  return arrHasil
+ 
+  Hasil.push(satuDigit, duaDigit, tigaDigit, empatDigit)
+  return Hasil
 
 }
 console.log(digitsGrouper([1, 12, 13, 0, 88, 123, 456])); // [ [ 1, 0 ], [ 12, 13, 88 ], [ 123, 456 ], [] ]
